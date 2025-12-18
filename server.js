@@ -15,6 +15,11 @@ app.use("/api/users", userRoutes);
 app.use("/api/books", bookRoutes);
 
 const PORT = process.env.PORT || 5000;
+app.get('/',(req,res)=>{
+    res.send('API WORKING BHARADWAJ')
+
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
