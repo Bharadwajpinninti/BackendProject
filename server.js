@@ -19,10 +19,10 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-// === FIXED PART ===
+//server start
 const startServer = async () => {
   try {
-    await connectDB();  // Wait for successful connection
+    await connectDB();  
     console.log("MongoDB Connected successfully");
 
     app.listen(PORT, () => {
@@ -30,7 +30,7 @@ const startServer = async () => {
     });
   } catch (error) {
     console.error("Failed to connect to MongoDB:", error.message);
-    process.exit(1);  // Exit if DB connection fails
+    process.exit(1);  
   }
 };
 
